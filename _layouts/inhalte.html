@@ -1,0 +1,76 @@
+{% include head.html %}
+
+<body>
+    <div class="wrapper">
+        <div class="wrapper_burger-topicHeading">
+            <div class="div-fa-bars"><i class="fas fa-bars "></i></div>
+            <div id="topic_heading">
+                <h1 class="{{page.bigTitle}}">{{page.bigTitle}}</h1>
+            </div>
+        </div>
+        {% include navigation.html %}
+
+
+        <div class="wrapper-topic">
+            <h2 id="wt-heading">{{ page.title }}</h2>
+            <h3 id="ap-heading-date">- {{ page.datum }} -</h3>
+
+            <div>
+                <!-- <div class="content-navigation-wrapper">
+                    <h3 id="content-navigation-heading">Inhalt</h3>
+                    <ol class="content-navigation">
+
+                        <li><a href="#Einführung">Einführung</a></li>
+
+                    </ol>
+                </div> -->
+                <div class="content-section">
+                    {{content}}
+
+                    <div class="image-gallery">
+                        <h3>{{page.imgbig-title}}</h3>
+                        {% for image-big in page.images-big %}
+                        <img class="ig-image image-big" src="{{ image-big.image_path }}" alt="{{ image-big.title}}"
+                            style="width:100%">
+                        {% endfor %}
+                        <div class="image-grid-gallery">
+                            <!-- <h3>{{page.gallery-title}}</h3> -->
+                            <div class="ig-row">
+                                <div class="column">
+                                    {% for image-left in page.images-left %}
+                                    <img class="ig-image" src="{{ image-left.image_path }}" alt="{{ image-left.title}}"
+                                        style="width:100%">
+                                    {% endfor %}
+                                </div>
+                                <div class="column">
+                                    {% for image-right in page.images-right %}
+                                    <img class="ig-image" src="{{ image-right.image_path }}"
+                                        alt="{{ image-right.title}}" style="width:100%">
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="button_backTop"><a href="#topic_heading"><i
+                                    class="fas fa-chevron-up"></i></a></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- The Modal Enlarge Image on Click-->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
+
+        {% include footer.html %}
+
+
+        {% include scripts.html %}
+        <script type="text/javascript" src="/assets/javascript/modal_enlargeImg.js"></script>
+</body>
+
+</html>

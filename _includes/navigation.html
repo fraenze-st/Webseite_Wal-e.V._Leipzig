@@ -1,0 +1,106 @@
+<nav id="navigation-menu">
+    <div class="burger-container">
+        <i class="fas fa-bars burgerMenu"></i>
+    </div>
+    <div>
+        <ul>
+            <li id="nav-home"><a href="/index.html">Wal e.V.</a></li>
+        </ul>
+        <ul class="nav-topics-wrapper">
+
+            <li class="nav-topics"><span>Arbeitsprozesse</span>
+                <ul>
+                    <li class="nav-subtopics"><span>2019<i class="fas fa-caret-down"></i></span>
+                        <ul class="nav-dropdown-content">
+                            {% for ap-2019 in site.arbeitsprozesse-2019 reversed %}
+                            <li class="nav-subsubtopics"><a href="{{ ap-2019.url }}">{{ ap-2019.datum }}
+                                    {{ ap-2019.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    <li class="nav-subtopics"><span>2018<i class="fas fa-caret-down"></i></span>
+                        <ul class="nav-dropdown-content">
+                            {% for ap-2018 in site.arbeitsprozesse-2018 reversed %}
+                            <li class="nav-subsubtopics"><a href="{{ ap-2018.url }}">{{ ap-2018.datum }}
+                                    {{ ap-2018.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    <li class="nav-subtopics"><span>2017<i class="fas fa-caret-down"></i></span>
+                        <ul class="nav-dropdown-content">
+                            {% for ap-2017 in site.arbeitsprozesse-2017 reversed %}
+                            <li class="nav-subsubtopics"><a href="{{ ap-2017.url }}">{{ ap-2017.datum }}
+                                    {{ ap-2017.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+            </li>
+        </ul>
+        </li>
+        <li class="nav-topics"><span>Schwerpunkte</span>
+            <ul>
+                <li class="nav-subtopics"><span>Heizung<i class="fas fa-caret-down"></i></span>
+                    <ul class="nav-dropdown-content">
+                        {% for heizung in site.ag-heizung reversed %}
+                        <li class="nav-subsubtopics"><a href="{{ heizung.url }}">{{ heizung.datum }}
+                                {{ heizung.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li class="nav-subtopics"><span>Future<i class="fas fa-caret-down"></i></span>
+                    <ul class="nav-dropdown-content">
+                        {% for future in site.ag-future reversed  %}
+                        <li class="nav-subsubtopics"><a href="{{ future.url }}">{{ future.datum }}
+                                {{ future.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li class="nav-subtopics"><span>Kurzfristig<i class="fas fa-caret-down"></i></span>
+                    <ul class="nav-dropdown-content">
+                        {% for kurzfristig in site.ag-kurzfristig reversed  %}
+                        <li class="nav-subsubtopics"><a href="{{ kurzfristig.url }}">{{ kurzfristig.datum }}
+                                {{ kurzfristig.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li class="nav-subtopics"><span>Konzept<i class="fas fa-caret-down"></i></span>
+                    <ul class="nav-dropdown-content">
+                        {% for konzept in site.ag-konzept reversed %}
+                        <li class="nav-subsubtopics"><a href="{{ konzept.url }}">{{ konzept.datum }}
+                                {{ konzept.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li class="nav-topics"><span>Ereignisse</span>
+            <ul>
+                <li class="nav-subtopics"><span>2019<i class="fas fa-caret-down"></i></span>
+                    <ul class="nav-dropdown-content">
+                        {% for ereignis2019 in site.ereignisse2019 reversed %}
+                        <li class="nav-subsubtopics"><a href="{{ ereignis2019.url }}">{{ ereignis2019.datum }}
+                                {{ ereignis2019.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li class="nav-subtopics"><span>2018<i class="fas fa-caret-down"></i></span>
+                    <ul class="nav-dropdown-content">
+                        {% for ereignis2018 in site.ereignisse2018 reversed %}
+                        <li class="nav-subsubtopics"><a href="{{ ereignis2018.url }}">{{ ereignis2018.datum }}
+                                {{ ereignis2018.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li class="nav-subtopics"><span>2017<i class="fas fa-caret-down"></i></span>
+                    <ul class="nav-dropdown-content">
+                        {% for ereignis2017 in site.ereignisse2017 reversed %}
+                        <li class="nav-subsubtopics"><a href="{{ ereignis2017.url }}">{{ ereignis2017.datum }}
+                                {{ ereignis2017.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-topics"><span>Konzept</span> </li>
+</nav>

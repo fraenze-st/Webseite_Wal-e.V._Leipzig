@@ -1,0 +1,71 @@
+title: Wal e.V. - Chroniken
+description: >- # this means to ignore newlines until "baseurl:"
+  Ereignisse und Arbeitsprozesse des Vereins
+url: "wal-leipzig.de"
+# erstellt von:
+github_username: fraenze-st
+
+
+collections:
+# Arbeitsprozesse
+  arbeitsprozesse-2019:
+    permalink: /Arbeitsprozesse2019/:title/
+    output: true
+  hauswegfahrt2019:
+    permalink:  /Arbeitsprozesse2019/Hauswegfahrt/:title
+    output: true
+  arbeitsprozesse-2018:
+    permalink: /Arbeitsprozesse2018/:title/
+    output: true
+  arbeitsprozesse-2017:
+    permalink: /Arbeitsprozesse2017/:title/
+    output: true
+
+  # Schwerpunkte
+  ag-future:
+    permalink: /Arbeitsgruppen/Future/:title/
+    output: true
+  ag-heizung:
+    permalink: /Arbeitsgruppen/Heizung/:title/
+    output: true
+  ag-kurzfristig:
+    permalink: /Arbeitsgruppen/Kurzfristige-Aktionen/:title/
+    output: true
+  ag-hauskauf:
+    permalink: /Arbeitsgruppen/Hauskauf/:title/
+    output: true
+  ag-konzept:
+    permalink: /Arbeitsgruppen/Konzept/:title/
+    output: true
+    
+  # Ereignisse
+  ereignisse2019:
+    permalink: /Ereignisse-2019/:title/
+    output: true
+  ereignisse2018:
+    permalink: /Ereignisse-2018/:title/
+    output: true
+  ereignisse2017:
+    permalink: /Ereignisse-2018/:title/
+    output: true
+  
+collections_dir: posts_beitraege
+
+sass:
+    sass_dir: /assets/css/
+    style: :nested
+
+
+# Build settings
+markdown: kramdown
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

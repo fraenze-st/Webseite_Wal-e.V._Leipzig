@@ -1,0 +1,44 @@
+/* burger menu */
+.burger-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 3.7em;
+    top: 0;
+    left: 0;
+    position: absolute;
+    align-items: center;
+    padding: 0em 1rem;
+
+    @media #{$small} {
+        height: 3em;
+        padding: 0em 1rem;
+    }
+}
+
+// div vom burger in postpages
+.div-fa-bars {
+    display: none;
+
+    @media #{$middle} {
+        display: block;
+    }
+}
+
+// burger in navbar und neben topic-heading
+.fa-bars {
+    visibility: hidden;
+
+    @media #{$middle} {
+        font-size: 1.1rem;
+        visibility: visible;
+        color: darken($red, 5%);
+
+        &:hover {
+            color: darken($pink, 22%);
+        }
+    }
+
+    @media #{$small} {
+        font-size: 1rem;
+    }
+}
