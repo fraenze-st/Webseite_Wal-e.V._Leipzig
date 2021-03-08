@@ -1,42 +1,49 @@
 * {
-    box-sizing: border-box;
-    padding: 0em;
-    margin: 0em;
-    font-family: 'Source Sans Pro', sans-serif;
-    line-height: 1.7em;
+  box-sizing: border-box;
+  padding: 0em;
+  margin: 0em;
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1.7em;
 }
 
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html {
-    height: 100vh;
-    position: relative;
-    scroll-behavior: smooth;
-    font-size: 17px;
-    /* overflow-y: scroll; */
+  height: 100vh;
+  position: relative;
+  scroll-behavior: smooth;
+  font-size: 17px;
+  /* overflow-y: scroll; */
 }
 
-
 body::-webkit-scrollbar-track {
-    background-color: darken($light, 2%);
+  background-color: darken($light, 2%);
 }
 
 body::-webkit-scrollbar {
-    width: 10.5px;
+  width: 10.5px;
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: rgba($green-blue, 0.5);
+  background-color: rgba($green-blue, 0.5);
 
-    background-color: rgba($red, 0.6);
-    background: linear-gradient(to bottom, lighten(rgba($red, 0.6), 20%) 20%, rgba($red, 0.6) 80%);
+  background-color: rgba($red, 0.6);
+  background: linear-gradient(
+    to bottom,
+    lighten(rgba($red, 0.6), 20%) 20%,
+    rgba($red, 0.6) 80%
+  );
 
-    &:hover {
-        background: linear-gradient(to bottom, lighten(rgba($red, 0.6), 10%) 20%, rgba($red, 0.75) 80%);
-    }
+  &:hover {
+    background: linear-gradient(
+      to bottom,
+      lighten(rgba($red, 0.6), 10%) 20%,
+      rgba($red, 0.75) 80%
+    );
+  }
 }
 
 h1,
@@ -44,60 +51,59 @@ h2,
 h3,
 h4,
 h5 {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 /* transparent background-image */
 /* https://css-tricks.com/snippets/css/transparent-background-images/ */
 
 html:after {
-    content: "";
-    background: url(../images/IMG_5530.JPG);
-    // background: url(../images/zwenkauer.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    opacity: 0.8;
-    /* Add the blur effect */
-    filter: blur(0.15px);
-    -webkit-filter: blur(0.15px);
+  content: "";
+  background: url(../images/wueste_2.jpg);
+  // background: url(../images/zwenkauer.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.8;
+  /* Add the blur effect */
+  filter: blur(0.15px);
+  -webkit-filter: blur(0.15px);
+  -webkit-filter: grayscale(30%);
+  // filter: grayscale(10%);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
+
+  @media #{$tall} {
+    opacity: 0.6;
+    filter: blur(0.3px);
+    -webkit-filter: blur(0.3px);
     -webkit-filter: grayscale(30%);
-    // filter: grayscale(10%);
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: fixed;
-    z-index: -1;
+    filter: grayscale(30%);
+  }
 
-    @media #{$tall} {
-        opacity: 0.6;
-        filter: blur(0.3px);
-        -webkit-filter: blur(0.3px);
-        -webkit-filter: grayscale(30%);
-        filter: grayscale(30%);
-    }
-
-    @media #{$middle} {
-        opacity: 0.5;
-    }
-
+  @media #{$middle} {
+    opacity: 0.5;
+  }
 }
 
 body {
-    height: 100vh;
-    color: $darkgrey;
+  height: 100vh;
+  color: $darkgrey;
 }
 
 .wrapper {
+  height: 100%;
+  margin: 0em 9vw 0em $widthNav;
+
+  @media #{$tall} {
     height: 100%;
-    margin: 0em 9vw 0em $widthNav;
+    margin: 0em 6vw 0em $widthNav;
+  }
 
-    @media #{$tall} {
-        height: 100%;
-        margin: 0em 6vw 0em $widthNav;
-    }
-
-    @media #{$middle} {
-        margin: 0em;
-    }
+  @media #{$middle} {
+    margin: 0em;
+  }
 }
